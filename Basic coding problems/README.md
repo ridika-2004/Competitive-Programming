@@ -10,7 +10,5 @@ In this repository, you'll find a collection of basic coding problems primarily 
 - Classic data structure problems (e.g., Valid Parentheses, Linked Lists, etc.)!
 - And much more!
 
-### What's New?
-I've tried to add pdfs as solution approach!!
 
 
