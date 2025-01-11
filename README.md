@@ -10,6 +10,7 @@
 ---
 
 <h2 align="center">📚 About</h2>
+
 <p>
 This repository is a collection of my solutions, implementations, and learning materials for various competitive programming problems and challenges. 
 It covers a wide range of topics, including algorithms, data structures, and problem-solving techniques.
@@ -31,7 +32,7 @@ It covers a wide range of topics, including algorithms, data structures, and pro
 <ul>
     <li><strong>Codeforces/</strong>: Solutions to problems from Codeforces contests.</li>
     <li><strong>Codechef/</strong>: My attempts at solving problems on CodeChef.</li>
-    <li><strong>Templates/</strong>: Useful C++ templates and snippets for competitive programming.</li>
+    <li><strong>Basic Coding Problems/</strong>: Useful C++ libraries and solutions for competitive programming.</li>
 </ul>
 
 ---
