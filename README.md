@@ -3,7 +3,8 @@
 <p align="center">
     <img src="https://img.shields.io/badge/Language-C++-blue?style=flat-square">
     <img src="https://img.shields.io/badge/Status-Active-success?style=flat-square">
-    <img src="https://img.shields.io/github/license/ridika-2004/Competitive-Programming?style=flat-square">
+    <img src="https://img.shields.io/github/license/ridika-2004/Competitive-Programming?style=flat-square" alt="License">
+
 </p>
 
 ---
@@ -29,7 +30,7 @@ It covers a wide range of topics, including algorithms, data structures, and pro
 <h2 align="center">📁 File Structure</h2>
 <ul>
     <li><strong>Codeforces/</strong>: Solutions to problems from Codeforces contests.</li>
-    <li><strong>LeetCode/</strong>: My attempts at solving problems on LeetCode.</li>
+    <li><strong>Codechef/</strong>: My attempts at solving problems on CodeChef.</li>
     <li><strong>Templates/</strong>: Useful C++ templates and snippets for competitive programming.</li>
 </ul>
 
