@@ -1,4 +1,3 @@
-
 <h1 align="center">Competitive Programming</h1>
 <p align="center">
     <img src="https://img.shields.io/badge/Language-C++-blue?style=flat-square">
@@ -7,7 +6,9 @@
 
 </p>
 
----
+<p align="center">
+<img src="https://github.com/user-attachments/assets/d52cce06-3ccc-4ba3-a053-b9b5e2f344fc" width="200px"></p>
+
 
 <h2 align="center">📚 About</h2>
 
