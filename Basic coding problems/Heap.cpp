@@ -36,6 +36,29 @@ class heap{
         }
         p("")
     }
+
+    void remove(){
+        if(size==0){
+            p("Heap is empty")
+            return;
+        }
+        arr[1] = arr[size];
+        size--;
+        ll i =1;
+        while(i<size){
+            ll leftindex = 2*i;
+            ll rightindex = 2*i+1;
+            if(leftindex<size && arr[i]<arr[leftindex]){
+                swap(arr[i],arr[leftindex]);
+                i = leftindex;
+            } else if(rightindex<size && arr[i]<arr[rightindex]){
+                swap(arr[i],arr[rightindex]);
+                i = rightindex;
+            } else {
+                return;
+            }
+        }
+    }
 };
 
 int main(){
@@ -45,6 +68,8 @@ int main(){
     h.insert(1);
     h.insert(5);
     h.insert(100);
+    h.print();
+    h.remove();
     h.print();
     return 0;
 }
