@@ -16,6 +16,8 @@ int main(){
         for(ll j=0; j<n-i-1; j++){
             if(v[j]>v[j+1]){
                 swap(v[j], v[j+1]);
+                cout<<"Swapping "<<v[j]<<" and "<<v[j+1]<<endl;
+                this_thread::sleep_for(chrono::seconds(1));
             }
         }
 
