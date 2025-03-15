@@ -8,6 +8,7 @@ int main(){
     ll n;
     cin>>n;
     priority_queue<ll> pq;
+    // priority_queue<ll, vector<ll>, greater<ll>> pq; // Min-Heap
     for(ll i=0;i<n;i++){
         ll a;
         cin>>a;
