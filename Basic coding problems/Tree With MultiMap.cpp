@@ -16,6 +16,22 @@ void print(multimap<ll,ll> tree, ll root, ll level =0){
     }
 }
 
+void bfs(multimap<ll,ll> &tree, ll root) {
+    queue<ll> q;
+    q.push(root);
+
+    while (!q.empty()) {
+        ll node = q.front();
+        q.pop();
+        cout << node << " ";
+
+        auto range = tree.equal_range(node);
+        for (auto it = range.first; it != range.second; it++) {
+            q.push(it->second);
+        }
+    }
+}
+
 int main() {
 
     //multiset<ll> ms={1,2,4,4,4,4,4,5,5,6,7};
