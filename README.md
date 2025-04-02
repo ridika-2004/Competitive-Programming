@@ -44,7 +44,7 @@ Clone this repository to explore solutions or use templates in your own projects
 </p>
 
 ```bash
-git clone https://github.com/ridika-2004/Novice-Competitive-Programming.git
+git clone https://github.com/ridika-2004/Competitive-Programming.git
 ```
 
 <h2 align="center">📈 Progress</h2> 
