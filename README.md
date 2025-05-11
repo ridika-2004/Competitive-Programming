@@ -54,7 +54,6 @@ git clone https://github.com/ridika-2004/Competitive-Programming.git
 <p align="center"> If you have suggestions or just want to connect, feel free to reach out: </p> 
 <ul> 
   <li>Email: <strong>nazninridika2004@gmail.com</strong></li> 
-  <li>Portfolio: <a href="https://ridika-naznin-portfolio.netlify.app/" target="_blank">ridika-naznin-portfolio.netlify.app</a></li> 
 </ul>
 
 <h2 align="center">📝 License</h2>
