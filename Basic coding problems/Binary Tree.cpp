@@ -1,85 +1,148 @@
 #include <bits/stdc++.h>
 #define ll long long
-#define m(x) cout << x << " ";
+#define p(x) cout << x <<" ";
+#define br cout<<endl;
 using namespace std;
 
-void inorder(ll root, vector<vector<ll>>& tree){
+ll diameteroftree(ll root, vector<vector<ll>> tree){
     if(tree[root].size()==0){
-        if(root!=-1) m(root)
-        return;
+        return 1LL;
+    }
+    else if(tree[root].size()==1){
+        return diameteroftree(tree[root][0], tree);
     } else {
-        if(root!=-1){
-            inorder(tree[root][0], tree);
-            m(root);
-            inorder(tree[root][1], tree);
-        }
+        ll left = heightoftree(tree[root][0], tree);
+        ll right = heightoftree(tree[root][1], tree);
+        ll res1 =  1LL+left+right;
+
+        ll left_dia = diameteroftree(tree[root][0], tree);
+        ll right_dia = diameteroftree(tree[root][1], tree);
+        return max({res1, left_dia, right_dia});
     }
 }
 
-void preorder(ll root, vector<vector<ll>>& tree){
+ll heightoftree(ll root, vector<vector<ll>> tree){
     if(tree[root].size()==0){
-        if(root!=-1) m(root)
-        return;
+        return 0LL;
+    }
+    else if(tree[root].size()==1){
+        return 1LL+heightoftree(tree[root][0], tree);
     } else {
-        if(root!=-1){
-            m(root)
-            preorder(tree[root][0], tree);
-            preorder(tree[root][1], tree);
-        }
+        ll left = heightoftree(tree[root][0], tree);
+        ll right = heightoftree(tree[root][1], tree);
+        return 1LL+max(left,right);
     }
 }
 
-void postorder(ll root, vector<vector<ll>>& tree){
-    if(tree[root].size()==0){
-        if(root!=-1) m(root);
-        return;
-    } else {
-        if(root!=-1){
-            postorder(tree[root][0], tree);
-            postorder(tree[root][1], tree);
-            m(root);
+void printtree(const vector<vector<ll>> tree) {
+    for (ll i = 1; i <= tree.size(); ++i) {
+        p("Node " << i << ":")
+        for (ll child : tree[i]) {
+            p(child)
         }
+        br
     }
 }
 
-void dfs(ll root, vector<vector<ll>>& tree){
-    if(root!=-1) m(root);
+void inorder(ll root, vector<vector<ll>> tree){
+    if(tree[root].size()==0){
+        p(root)
+        return;
+    }
+    else if(tree[root].size()==1){
+        inorder(tree[root][0], tree);
+        p(root)
+    }
+    else {
+        inorder(tree[root][0], tree);
+        p(root)
+        inorder(tree[root][1], tree);
+    }
+}
+
+void preorder(ll root, vector<vector<ll>> tree){
+    if(tree[root].size()==0){
+        p(root)
+        return;
+    }
+    else if(tree[root].size()==1){
+        preorder(tree[root][0], tree);
+        p(root)
+    }
+    else {
+        p(root)
+        preorder(tree[root][0], tree);
+        preorder(tree[root][1], tree);
+    }
+}
+
+void postorder(ll root, vector<vector<ll>> tree){
+    if(tree[root].size()==0){
+        p(root)
+        return;
+    }
+    else if(tree[root].size()==1){
+        postorder(tree[root][0], tree);
+        p(root)
+    }
+    else {
+        postorder(tree[root][0], tree);
+        postorder(tree[root][1], tree);
+        p(root)
+    }
+}
+
+void dfs(ll root, vector<vector<ll>> tree){
+    p(root)
     for(ll child : tree[root]){
-        if(child!=-1){
-            dfs(child, tree);
-        }
+        dfs(child, tree);
     }
 }
 
-void bfs(ll root, vector<vector<ll>>& tree){
+void bfs(ll root, vector<vector<ll>> tree){
     queue<ll> q;
     q.push(root);
+
     while(!q.empty()){
         ll curr = q.front();
-        m(curr)
+        p(curr)
         q.pop();
+
         for(ll child : tree[curr]){
             q.push(child);
         }
     }
 }
 
-
 int main() {
 
-    ll n;
-    cin>>n;
-    vector<vector<ll>> tree(n+1);
-    for(ll i=0;i<n;i++){
-        ll x,y,z;
-        cin>>x>>y>>z;
-        tree[x] = {y,z};
-    }
+    // diameter of this tree
+    // height of this tree
 
-    inorder(1, tree);
-    cout<<endl;
+    ios::sync_with_stdio(0);
+    cin.tie(0);
 
-    dfs(1, tree);
-    cout<<endl;
+    vector<vector<ll>> tree(7);
+    tree[1] = {2, 3};
+    tree[2] = {4, 5};
+    tree[3] = {6, 7};
+    tree[4] = {8};
+
+    p(diameteroftree(1, tree))
+    br
+
+    // p(tree.size())
+    // br
+
+    // postorder(1,tree);
+    // br
+
+    // printtree(tree);
+
+    // dfs(1, tree);
+    // br
+    // bfs(1,tree);
+    // br
+
     return 0;
 }
